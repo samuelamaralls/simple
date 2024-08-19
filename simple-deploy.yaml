@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: simple
+  name: simple
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: simple
+    spec:
+      containers:
+      - image: mclovin612615/simple:1.0
+        name: simple
+        ports:
+        - containerPort: 3000
+        env:
+        - name: DB_HOST
+          value: "kxc-simple.cb4k2qcwyxd2.us-east-1.rds.amazonaws.com"
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_USER
+          value: "postgres"
+        - name: DB_PASSWORD
+          value: "12345678"
+        - name: DB_DATABASE
+          value: ""
+          
+
+
+
