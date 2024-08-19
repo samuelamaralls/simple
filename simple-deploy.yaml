@@ -22,13 +22,13 @@ spec:
         - containerPort: 3000
         env:
         - name: DB_HOST
-          value: "kxc-simple.cb4k2qcwyxd2.us-east-1.rds.amazonaws.com"
+          value: ""
         - name: DB_PORT
-          value: "5432"
+          value: ""
         - name: DB_USER
-          value: "postgres"
+          value: ""
         - name: DB_PASSWORD
-          value: "12345678"
+          value: ""
         - name: DB_DATABASE
           value: ""
           
